@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://due3f81u7q1a5"]
+
+[ext_resource type="Script" path="res://Scripts/picnic_basket.gd" id="1_yvpp3"]
+[ext_resource type="Texture2D" uid="uid://d3hwucoxbroog" path="res://Sprites/Piknik basket.png" id="2_brseb"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_46ay0"]
+size = Vector2(50, 41)
+
+[node name="PicnicBasket" type="Area2D"]
+script = ExtResource("1_yvpp3")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(3, 3)
+texture = ExtResource("2_brseb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, -1.5)
+shape = SubResource("RectangleShape2D_46ay0")
