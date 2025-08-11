@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=4 uid="uid://bkrge2gmhupvs"]
 
 [ext_resource type="Texture2D" uid="uid://nb1mkkkli1e4" path="res://Sprites/Grass_tiles_v2_simple.png" id="1_3t5bi"]
-[ext_resource type="Script" path="res://Scenes/main.gd" id="1_rin4q"]
+[ext_resource type="Script" uid="uid://dk72gkmvfy0iw" path="res://Scenes/main.gd" id="1_rin4q"]
 [ext_resource type="PackedScene" uid="uid://due3f81u7q1a5" path="res://Scenes/picnic_basket.tscn" id="3_7r86c"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_scd8e"]

@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://due3f81u7q1a5"]
 
-[ext_resource type="Script" path="res://Scripts/picnic_basket.gd" id="1_yvpp3"]
+[ext_resource type="Script" uid="uid://b8hc38d2e7wfn" path="res://Scripts/picnic_basket.gd" id="1_yvpp3"]
 [ext_resource type="Texture2D" uid="uid://d3hwucoxbroog" path="res://Sprites/Piknik basket.png" id="2_brseb"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_46ay0"]
