@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=4 uid="uid://bkrge2gmhupvs"]
+[gd_scene load_steps=7 format=4 uid="uid://bkrge2gmhupvs"]
 
 [ext_resource type="Texture2D" uid="uid://nb1mkkkli1e4" path="res://Sprites/Grass_tiles_v2_simple.png" id="1_3t5bi"]
 [ext_resource type="Script" uid="uid://dk72gkmvfy0iw" path="res://Scenes/main.gd" id="1_rin4q"]
 [ext_resource type="PackedScene" uid="uid://due3f81u7q1a5" path="res://Scenes/picnic_basket.tscn" id="3_7r86c"]
+[ext_resource type="PackedScene" uid="uid://blpitil6xbejm" path="res://Scenes/nest.tscn" id="4_jjvhh"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_scd8e"]
 texture = ExtResource("1_3t5bi")
@@ -46,7 +47,7 @@ tile_map_data = PackedByteArray("AAAAAAAAAAACAAQAAAAAAAEAAAAFAAQAAAAAAAIAAAAFAAM
 tile_set = SubResource("TileSet_hc7xn")
 
 [node name="Food" parent="." instance=ExtResource("3_7r86c")]
-position = Vector2(973, 340)
+position = Vector2(564, 59)
 
 [node name="ProgressLabel" type="Label" parent="."]
 anchors_preset = -1
@@ -63,4 +64,5 @@ text = "0
 "
 horizontal_alignment = 1
 
-[connection signal="eaten" from="Food" to="." method="_on_food_eaten"]
+[node name="Nest" parent="." instance=ExtResource("4_jjvhh")]
+position = Vector2(563, 326)

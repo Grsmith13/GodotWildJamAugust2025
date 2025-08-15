@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://blpitil6xbejm"]
+
+[ext_resource type="Texture2D" uid="uid://3lbui1ngq18f" path="res://Sprites/Piknik blanket.png" id="1_a18bm"]
+[ext_resource type="Script" uid="uid://bmxg174nx2hll" path="res://Scenes/nest.gd" id="1_xe7l4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vxvd1"]
+size = Vector2(39, 29)
+
+[node name="Nest" type="Area2D"]
+script = ExtResource("1_xe7l4")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_a18bm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, 0.5)
+shape = SubResource("RectangleShape2D_vxvd1")
+
+[node name="Marker2D" type="Marker2D" parent="."]
