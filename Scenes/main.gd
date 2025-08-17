@@ -18,7 +18,7 @@ func _process(delta: float) -> void:
 
 
 
-
 func _on_food_eaten() -> void:
+	$EatSound.play()
 	score += 1
 	progress_label.text = "Progress: " + str(score)
