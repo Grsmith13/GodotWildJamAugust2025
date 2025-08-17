@@ -1,27 +1,48 @@
-[gd_scene load_steps=5 format=3 uid="uid://hmdr47m67jbw"]
+[gd_scene load_steps=8 format=3 uid="uid://hmdr47m67jbw"]
 
 [ext_resource type="Script" uid="uid://dhitsnkcxrch3" path="res://Scenes/critter.gd" id="1_6q8w7"]
-[ext_resource type="Texture2D" uid="uid://x6ph5ppdu6t" path="res://Sprites/chicken red.png" id="1_qdx55"]
+[ext_resource type="Texture2D" uid="uid://clxkcsnya3u72" path="res://Sprites/bug.png" id="3_qvk5e"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_v40h8"]
 radius = 7.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vh7e7"]
+atlas = ExtResource("3_qvk5e")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r7ikc"]
+atlas = ExtResource("3_qvk5e")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vh7e7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vh7e7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r7ikc")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_vdplk"]
 radius = 8.0
 height = 16.0
 
 [node name="Critter" type="CharacterBody2D"]
+z_index = 1
 script = ExtResource("1_6q8w7")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 rotation = -3.14159
 shape = SubResource("CircleShape2D_v40h8")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_qdx55")
-hframes = 8
-vframes = 27
-frame = 2
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_vh7e7")
+frame_progress = 0.885709
 
 [node name="Area2D" type="Area2D" parent="."]
 
