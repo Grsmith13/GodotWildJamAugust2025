@@ -1,38 +1,32 @@
 class_name  Critter extends CharacterBody2D
 
-
 @export var speed = 50
 @onready var nest = get_tree().get_root().get_node("Main/Nest")
 @export var limit = 0.5
+
 var target: Vector2 
 var return_home := false
 var nest_location: Vector2
-
 var startPosition
 var endPosition
-var dir 
-
-func _ready():
-	#nest_location = nest.global_position
-	#startPosition = nest_location
-	#endPosition = target
-	print("This is the value of target in the Critter scene", target)
-	
+var dir
 
 
-func _physics_process(delta: float) -> void:
+func _ready() -> void:
+	$AnimatedSprite2D.play("default")
+
+func _physics_process(_delta: float) -> void:
 	dir = (target - position)
+	
 	if position.distance_to(target) > 10:
 		velocity = position.direction_to(target) * speed
-		#velocity = dir * speed
-		
 		
 	if position.distance_to(target) < 10:
-		print(target)
 		target = nest.global_position
-		print(target, nest.global_position)
 		if position.distance_to(target) < 10:
 			queue_free()
+
+	$AnimatedSprite2D.rotation = velocity.angle()
 
 	move_and_slide()
 

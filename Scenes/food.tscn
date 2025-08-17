@@ -1,0 +1,32 @@
+[gd_scene load_steps=6 format=3 uid="uid://due3f81u7q1a5"]
+
+[ext_resource type="Script" uid="uid://b8hc38d2e7wfn" path="res://Scenes/food.gd" id="1_yvpp3"]
+[ext_resource type="Texture2D" uid="uid://cejeiode1hgmd" path="res://Sprites/tomato.png" id="2_h4kkx"]
+[ext_resource type="AudioStream" uid="uid://c4apymrnktxhk" path="res://Sounds/eat_1.wav" id="3_wrk4h"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_46ay0"]
+size = Vector2(50, 41)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nenot"]
+size = Vector2(50, 41)
+
+[node name="Food" type="Area2D"]
+z_index = 2
+script = ExtResource("1_yvpp3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, -1.5)
+shape = SubResource("RectangleShape2D_46ay0")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-1, -1.5)
+shape = SubResource("RectangleShape2D_nenot")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(3, 3)
+texture = ExtResource("2_h4kkx")
+
+[node name="PickupSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_wrk4h")

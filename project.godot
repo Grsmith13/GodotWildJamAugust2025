@@ -31,16 +31,14 @@ DSP/dsp_buffer_count=4
 config/name="GWJ#84_Prototype"
 run/main_scene="res://Scenes/main.tscn"
 config/features=PackedStringArray("4.4", "Forward Plus")
-config/icon="res://Sprites/icon.svg"
-
-[autoload]
-
-FmodManager="*res://addons/fmod/FmodManager.gd"
+config/icon="uid://ch2lf8lj0n4rg"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/fmod/plugin.cfg")
+enabled=PackedStringArray()
 
 [rendering]
 
 textures/canvas_textures/default_texture_filter=0
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"
